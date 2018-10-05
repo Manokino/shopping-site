@@ -838,8 +838,45 @@ footer {
           td{
             border: #e3e8cf 1px solid;
             width: 36%;
-            color: #e8e4da;
-            font-weight: bold;
+            
+            label {
+              input {
+                display: none;
+              }
+              
+              span{
+                padding-left: 10px;
+                position: relative;
+                margin-right: 20px;
+                text-align: center;
+              }
+              span::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 16px;
+                height: 16px;
+                border: 1px solid $lightgold;
+              }
+              .checkbox:checked + span{
+                color: $lightgold;
+              }
+              .checkbox:checked + span::after{
+                content: "";
+                display: block;
+                position: absolute;
+                top: -5px;
+                left: 5px;
+                width: 7px;
+                height: 14px;
+                transform: rotate(40deg);
+                border-bottom: 3px solid $gold;
+                border-right: 3px solid $gold;
+              }
+            }
+            //checkbox
           }
         }
       }
@@ -864,11 +901,8 @@ footer {
               color: $gold;
               @include fontsize(14);
               font-weight: bold;
-              width: 120px;
+              width: 100px;
               
-              @media (max-width: 640px){
-                width: 200px;
-              }
             }
             h3{
               color: #e80f66;
@@ -903,18 +937,16 @@ footer {
             h2{
                 font-weight: bold;
                 @include fontsize(14);
-                width: 120px;
+                width: 100px;
                 
-                @media (max-width: 640px){
-                  width: 200px;
-                }
               }
-            
-            div{
+            input{
               width: 140px;
               height: 40px;
               border: #e3e8cf 1px solid;
               margin: auto 0;
+              @include fontsize(14);
+              color: black;
             }
           }
         }

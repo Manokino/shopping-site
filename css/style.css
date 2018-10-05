@@ -631,9 +631,36 @@ footer #copyright {
         font-weight: bold; }
       #product_area #product_content #colorsize table tr td {
         border: #e3e8cf 1px solid;
-        width: 36%;
-        color: #e8e4da;
-        font-weight: bold; }
+        width: 36%; }
+        #product_area #product_content #colorsize table tr td label input {
+          display: none; }
+        #product_area #product_content #colorsize table tr td label span {
+          padding-left: 10px;
+          position: relative;
+          margin-right: 20px;
+          text-align: center; }
+        #product_area #product_content #colorsize table tr td label span::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 16px;
+          height: 16px;
+          border: 1px solid #e2ddd4; }
+        #product_area #product_content #colorsize table tr td label .checkbox:checked + span {
+          color: #e2ddd4; }
+        #product_area #product_content #colorsize table tr td label .checkbox:checked + span::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: -5px;
+          left: 5px;
+          width: 7px;
+          height: 14px;
+          transform: rotate(40deg);
+          border-bottom: 3px solid #887f69;
+          border-right: 3px solid #887f69; }
     #product_area #product_content #product_flex {
       display: flex; }
       #product_area #product_content #product_flex #flex1 {
@@ -650,10 +677,7 @@ footer #copyright {
             font-size: 14px;
             font-size: 1.4rem;
             font-weight: bold;
-            width: 120px; }
-            @media (max-width: 640px) {
-              #product_area #product_content #product_flex #flex1 #price h2 {
-                width: 200px; } }
+            width: 100px; }
           #product_area #product_content #product_flex #flex1 #price h3 {
             color: #e80f66;
             font-size: 22px;
@@ -680,15 +704,15 @@ footer #copyright {
             font-weight: bold;
             font-size: 14px;
             font-size: 1.4rem;
-            width: 120px; }
-            @media (max-width: 640px) {
-              #product_area #product_content #product_flex #flex1 #quantity h2 {
-                width: 200px; } }
-          #product_area #product_content #product_flex #flex1 #quantity div {
+            width: 100px; }
+          #product_area #product_content #product_flex #flex1 #quantity input {
             width: 140px;
             height: 40px;
             border: #e3e8cf 1px solid;
-            margin: auto 0; }
+            margin: auto 0;
+            font-size: 14px;
+            font-size: 1.4rem;
+            color: black; }
       #product_area #product_content #product_flex #flex2 {
         width: 40%; }
         @media (max-width: 640px) {
